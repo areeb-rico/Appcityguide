@@ -8,6 +8,7 @@ import Register from './pages/User/Register/Register';
 import Login from './pages/User/Login/Login';
 import AttractionListing from './pages/User/Attraction_listings/AttractionListing';
 import SearchResult from './pages/User/Search_results/SearchResult';
+import AdminDashboard from './pages/Admin_dash/adminDashboard';
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
          <Route path="/register" element={<Register/>}/>
          <Route path="/Splash" element={<Splash />}/>
          <Route path="/searchres" element={<SearchResult />}/>
+         <Route path="/admindash" element={<AdminDashboard />}/>
       </Routes>
    
    </>
