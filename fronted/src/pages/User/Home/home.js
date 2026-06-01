@@ -1,6 +1,16 @@
+import Footer from "../../../components/Footer/Footer";
+import Header from "../../../components/Header/Header";
+import HeroSection from "../../../components/Home/HereoSection";
+import Main from "../../../components/Home/Main";
+
 function home(){
     return(
-        <h1>Home Page</h1>
+       <>
+ <Header/>
+ <HeroSection />
+ <Main />
+ <Footer />
+    </>
     )
 }
 export default home;

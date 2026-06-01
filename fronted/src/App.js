@@ -9,9 +9,11 @@ import Login from './pages/User/Login/Login';
 import AttractionListing from './pages/User/Attraction_listings/AttractionListing';
 import SearchResult from './pages/User/Search_results/SearchResult';
 
+
 function App() {
   return (
     <>
+
     <Routes>
      <Route path="/" element={<Home/>}/>
       <Route path="/listing" element={<AttractionListing/>}/>
