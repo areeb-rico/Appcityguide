@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
 import { Route, Routes } from 'react-router-dom';
 import Home from "./pages/User/Home/home";
@@ -8,8 +8,8 @@ import Register from './pages/User/Register/Register';
 import Login from './pages/User/Login/Login';
 import AttractionListing from './pages/User/Attraction_listings/AttractionListing';
 import SearchResult from './pages/User/Search_results/SearchResult';
-import AdminDashboard from './pages/Admin_dash/adminDashboard';
 import ProfilePreference from './pages/User_dash/ProfilePreference';
+import AdminDashboard from "./pages/Admin_dash/AdminDashboard";
 
 
 function App() {
