@@ -9,6 +9,7 @@ import Login from './pages/User/Login/Login';
 import AttractionListing from './pages/User/Attraction_listings/AttractionListing';
 import SearchResult from './pages/User/Search_results/SearchResult';
 import AdminDashboard from './pages/Admin_dash/adminDashboard';
+import ProfilePreference from './pages/User_dash/ProfilePreference';
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
 
     <Routes>
      <Route path="/" element={<Home/>}/>
+        <Route path="/test" element={<ProfilePreference/>}/>
       <Route path="/listing" element={<AttractionListing/>}/>
        <Route path="/Login" element={<Login/>}/>
         <Route path="/maps" element={<MapsDirections/>}/>
