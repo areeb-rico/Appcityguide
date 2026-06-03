@@ -1,4 +1,8 @@
+import { useNavigate } from "react-router-dom";
+
 function Login() {
+  var navigate = useNavigate();
+
   function handlelogin(e) {
     e.preventDefault();
 
@@ -19,6 +23,14 @@ function Login() {
       .then((data) => {
         localStorage.setItem('token',data.token)
         console.log(data);
+        if(data.Role === "admin")
+        {
+            navigate('/admindash')          
+        }
+        else
+        {
+            navigate('/')                          
+        }
       });
   }
 

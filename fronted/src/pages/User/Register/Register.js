@@ -1,7 +1,9 @@
+import { useNavigate } from 'react-router-dom';
 function Register() {
-
+ const navigate = useNavigate();
 
     function handlesubmission(e){
+       
   e.preventDefault()
 
 var firstname = e.target.firstname.value
@@ -16,24 +18,26 @@ var password = e.target.password.value
         password
       }
 
-    try{
-          fetch ('http://localhost:4000/register',{
-        method : "post",
-         headers: 
-         {"Content-Type": "application/json"},
-        body : JSON.stringify(data)
-      }).then(res=>res.json())
-      .then(data => alert("User registered successfully!"))
-         
-    } catch (e){
-        alert("error occured , frontend side")
+  try {
+ fetch('http://localhost:4000/register', {
+      method: "POST",
+      headers: {"Content-Type": "application/json"},
+      body: JSON.stringify(data)
+    }).then(res => res.json()).then(result => {
+       if (result.success) {
+      alert("User registered successfully!");
+      navigate('/login');
+    } else {
+      alert(result.message || "Registration failed.");
     }
-
-
-
-
-
+  })
+}catch (err) {      
+    alert("Something went wrong. Please try again.");
+    console.error(err);
+  
+    
     }
+  }
   return (
     <div className="container mt-5">
       <div className="row justify-content-center">
@@ -96,4 +100,4 @@ var password = e.target.password.value
     </div>
   );
 }
-export default Register;
+export default Register

@@ -11,6 +11,7 @@ apiserver.use(cors());
 // register api
 apiserver.post("/register", async (req, res) => {
   var data = req.body;
+  data.role = "user"; 
   var query = await mongoserver
     .db("apicitiguide")
     .collection("users")
@@ -32,7 +33,7 @@ apiserver.post("/login", async (req, res) => {
 
   if (query) {
     var token = jwt.sign({ email: data.email }, secretkey);
-    res.json({ message: "you are successfully login", token: token });
+    res.json({ message: "you are successfully login", token: token,"Role":query.role });
   } else {
     res.json({ Error: "Invalid Credentials" });
   }
