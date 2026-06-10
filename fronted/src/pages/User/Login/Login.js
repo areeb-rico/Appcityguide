@@ -42,32 +42,38 @@ function Login() {
             <h3 className="text-center mb-4">login</h3>
 
             <form onSubmit={handlelogin}>
-              <div className="mb-3">
-                <label>Email</label>
-                <input
-                  type="email"
-                  className="form-control"
-                  placeholder="Enter email"
-                  name="email"
-                  required
-                />
-              </div>
+  <div className="mb-3">
+    <label>Email</label>
+    <input
+      type="email"
+      className="form-control"
+      placeholder="Enter email"
+      name="email"
+      required
+    />
+  </div>
 
-              <div className="mb-3">
-                <label>Password</label>
-                <input
-                  type="password"
-                  className="form-control"
-                  placeholder="Enter password"
-                  name="password"
-                  required
-                />
-              </div>
+  <div className="mb-3">
+    <label>Password</label>
+    <input
+      type="password"
+      className="form-control"
+      placeholder="Enter password"
+      name="password"
+      required
+    />
+  </div>
 
-              <button type="submit" className="btn btn-primary w-100">
-                login
-              </button>
-            </form>
+  <button type="submit" className="btn btn-primary w-100">
+    Login
+  </button>
+
+  {/* Register Link */}
+  <p className="text-center mt-3">
+    Don't have an account?{" "}
+    <a href="/register">Register</a>
+  </p>
+</form>
           </div>
         </div>
       </div>
