@@ -9,6 +9,7 @@ import Login from './pages/User/Login/Login';
 import AttractionListing from './pages/User/Attraction_listings/AttractionListing';
 import SearchResult from './pages/User/Search_results/SearchResult';
 import ProfilePreference from './pages/User_dash/ProfilePreference';
+import Writereviews from './pages/User_dash/Writereviews.js';
 import AuthGuard from './components/AuthGuard';
 import AdminDashboard from './pages/Admin_dash/AdminDashboard.js'
 
@@ -19,7 +20,9 @@ function App() {
 
     <Routes>
      <Route path="/" element={<Home/>}/>
-        <Route path="/test" element={<ProfilePreference/>}/>
+        <Route path="/profilepref" element={<ProfilePreference/>}/>
+         <Route path="/reviews" element={<Writereviews/>}/>
+
       <Route path="/listing" element={<AttractionListing/>}/>
        <Route path="/Login" element={<Login/>}/>
         <Route path="/maps" element={<MapsDirections/>}/>
